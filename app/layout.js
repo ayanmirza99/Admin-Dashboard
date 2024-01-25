@@ -2,7 +2,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import Menubar from "./components/Menubar";
 import Topbar from "./components/Topbar";
-import { GlobalContextProvider } from "./Context"; // Adjust the import path accordingly
+import { GlobalContextProvider } from "./Context/index";
 
 export const metadata = {
   title: "Admin",
