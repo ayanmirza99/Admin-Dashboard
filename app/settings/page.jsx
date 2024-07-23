@@ -1,7 +1,8 @@
+import PageTitle from "@/components/PageTitle"
 
 const page = () => {
   return (
-    <div>Settings</div>
+    <PageTitle title={"Settings"}/>
   )
 }
 

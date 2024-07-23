@@ -67,3 +67,16 @@
     @apply bg-background text-foreground;
   }
 }
+*::-webkit-scrollbar {
+  width: 6px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #f4f7fa;
+  border-radius: 20px;
+  outline: 1px solid #f4f7fa;
+}
+@media (width < 768px) {
+  *::-webkit-scrollbar {
+    width: 0;
+  }
+}

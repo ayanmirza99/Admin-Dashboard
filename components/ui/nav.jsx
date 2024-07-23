@@ -31,7 +31,7 @@ export function Nav({ links, isCollapsed }) {
         data-collapsed={isCollapsed}
         className="group flex flex-col items-center gap-4 py-2 data-[collapsed=true]:py-2"
       >
-        <nav className="grid gap-6 md:gap-12 px-2 group-[[data-collapsed=true]]:justify-center group-[[data-collapsed=true]]:px-2">
+        <nav className="grid gap-12 px-2 fixed md:static group-[[data-collapsed=true]]:justify-center group-[[data-collapsed=true]]:px-2">
           {links.map((link, index) =>
             isCollapsed ? (
               <Tooltip key={index} delayDuration={0}>
