@@ -15,7 +15,7 @@ This is an Admission Dashboard built with [Next.js](https://nextjs.org/), [Tailw
 First, clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/your-username/admission-dashboard.git
+git clone https://github.com/ayanmirza99/Admin-Dashboard.git
 cd admission-dashboard
 npm install
 # or
@@ -25,6 +25,7 @@ pnpm install
 # or
 bun install
 
+
 Next, run the development server:
 npm run dev
 # or
@@ -33,7 +34,6 @@ yarn dev
 pnpm dev
 # or
 bun dev
-
 Open http://localhost:3000 with your browser to see the result.
 
 Project Structure
@@ -63,4 +63,3 @@ Check out our Next.js deployment documentation for more details.
 
 License
 This project is licensed under the MIT License.
-```
