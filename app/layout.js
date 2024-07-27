@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Sidebar from "@/components/Sidebar";
+import { ThemeProvider } from "next-themes";
+import TopLoaderWithTheme from "@/components/TopLoaderWithTheme";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,16 +16,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
+        suppressHydrationWarning
         className={cn(
           "min-h-screen w-full bg-white text-black dark:bg-black dark:text-white flex",
           inter.className,
           { "debug-screens": process.env.NODE_ENV === "development" }
         )}
       >
-        {/* Sidebar */}
-        <Sidebar />
-        {/* Main Page */}
-        <div className="p-8 w-full">{children}</div>
+        <ThemeProvider attribute="class" enableSystem defaultTheme="system">
+          <TopLoaderWithTheme />
+          <Sidebar />
+          <div className="p-2 md:p-8 w-full dark:bg-black dark:text-white bg-white text-black">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

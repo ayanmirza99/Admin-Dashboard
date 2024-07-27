@@ -67,6 +67,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
 *::-webkit-scrollbar {
   width: 6px;
 }

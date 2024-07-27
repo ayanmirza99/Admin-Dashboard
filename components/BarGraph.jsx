@@ -1,5 +1,7 @@
 "use client"
 
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
 
 const data = [
@@ -54,6 +56,16 @@ const data = [
 ];
 
 export const BarGraph = () => {
+    const { resolvedTheme } = useTheme();
+    const [barFill, setBarFill] = useState("#8884d8"); // default color
+
+    useEffect(() => {
+        if (resolvedTheme === "dark") {
+            setBarFill("#ffff");
+        } else {
+            setBarFill("#000");
+        }
+    }, [resolvedTheme]);
     return (
         <ResponsiveContainer width={"100%"} height={450}>
             <BarChart data={data}>
@@ -74,6 +86,7 @@ export const BarGraph = () => {
                 <Bar
                     dataKey={"total"}
                     radius={[6, 6, 0, 0]}
+                    fill={barFill}
                 />
             </BarChart>
         </ResponsiveContainer>

@@ -77,4 +77,5 @@ module.exports = {
     require("tailwindcss-animate"),
     require("tailwindcss-debug-screens"),
   ],
+  darkMode: "class",
 };
